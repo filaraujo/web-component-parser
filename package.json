@@ -1,6 +1,6 @@
 {
     "name": "web-component-parser",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Parses html for web component references and creates a dependency json",
     "author": {
         "name": "Filipe Araujo",

@@ -75,10 +75,7 @@ describe('wcp', function() {
                 var contents = file.contents.toString(),
                     obj = JSON.parse(contents);
 
-                obj.should.have.property('wc-a');
-                obj.should.have.property('wc-b');
-                obj.should.have.property('wc-c');
-                obj.should.have.property('wc-d');
+                obj.should.have.length(4);
                 fs.unlinkSync(file.path);
                 done();
             };
@@ -94,12 +91,9 @@ describe('wcp', function() {
                 var contents = file.contents.toString(),
                     obj = JSON.parse(contents);
 
-                obj['wc-a'].should.have.property('imports');
-                obj['wc-a'].should.have.property('imports', ['polymer', 'wc-b']);
-                obj['wc-b'].should.have.property('imports');
-                obj['wc-b'].should.have.property('imports', ['wc-c', 'wc-d']);
-                obj['wc-d'].should.have.property('imports');
-                obj['wc-d'].should.have.property('imports', ['wc-a']);
+                obj.should.containEql({ name: 'wc-a', imports: [ 'polymer', 'wc-b' ] });
+                obj.should.containEql({ name: 'wc-b', imports: [ 'wc-c', 'wc-d' ] });
+                obj.should.containEql({ name: 'wc-d', imports: [ 'wc-a' ] });
                 fs.unlinkSync(file.path);
                 done();
             };
