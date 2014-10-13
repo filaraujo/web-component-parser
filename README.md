@@ -2,8 +2,7 @@
 
 Parses html for web component references and creates a dependency json
 
-This is a glob implementation in JavaScript.  It uses the `minimatch`
-library to do its matching.
+[![Build Status](https://travis-ci.org/filaraujo/web-component-parser.svg?branch=master)](https://travis-ci.org/filaraujo/web-component-parser)
 
 
 ## Install
