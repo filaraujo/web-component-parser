@@ -1,6 +1,6 @@
 {
     "name": "web-component-parser",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "Parses html for web component references and creates a dependency json",
     "author": {
         "name": "Filipe Araujo",
@@ -22,7 +22,7 @@
         "type": "git",
         "url": "git@github.com:filaraujo/web-component-parser.git"
     },
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "htmlparser2": "^3.7.3",
         "through2": "^0.6.3",
