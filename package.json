@@ -1,6 +1,6 @@
 {
     "name": "web-component-parser",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Parses html for web component references and creates a dependency json",
     "author": {
         "name": "Filipe Araujo",
@@ -26,11 +26,11 @@
     "dependencies": {
         "htmlparser2": "^3.7.3",
         "through2": "^0.6.3",
-        "vinyl": "^0.4.3"
+        "vinyl": "^0.4.3",
+        "vinyl-fs": "^0.3.9"
     },
     "devDependencies": {
         "mocha": "^1.21.5",
-        "should": "^4.0.4",
-        "vinyl-fs": "^0.3.9"
+        "should": "^4.0.4"
     }
 }
