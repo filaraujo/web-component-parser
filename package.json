@@ -1,21 +1,36 @@
 {
-  "name": "web-component-parser",
-  "version": "0.0.0",
-  "description": "Module that parse a directory for web components references and build a dependency file",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha ./test"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "htmlparser2": "^3.7.3",
-    "through2": "^0.6.3",
-    "vinyl": "^0.4.3"
-  },
-  "devDependencies": {
-    "mocha": "^1.21.5",
-    "should": "^4.0.4",
-    "vinyl-fs": "^0.3.9"
-  }
+    "name": "web-component-parser",
+    "version": "0.1.0",
+    "description": "Parses html for web component references and creates a dependency json",
+    "author": {
+        "name": "Filipe Araujo",
+        "email": "filipe.alves.araujo@gmail.com"
+    },
+    "keywords": [
+        "webcomponents",
+        "web-components",
+        "webcomponents-parser",
+        "web-components-parser",
+        "dependency",
+        "dependencies"
+    ],
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha ./test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:filaraujo/web-component-parser.git"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "htmlparser2": "^3.7.3",
+        "through2": "^0.6.3",
+        "vinyl": "^0.4.3"
+    },
+    "devDependencies": {
+        "mocha": "^1.21.5",
+        "should": "^4.0.4",
+        "vinyl-fs": "^0.3.9"
+    }
 }
