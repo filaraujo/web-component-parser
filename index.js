@@ -1,23 +1,26 @@
-var fs = require('vinyl-fs'),
-    deps = require('./lib/deps');
+var fs = require('vinyl-fs');
+var deps = require('./lib/deps');
 
 module.exports = {
-    dependencies: function(opts) {
-        'use strict';
 
-        opts = opts || {};
+  dependencies: function(opts) {
+    'use strict';
 
-        if (!opts.src) {
-            throw new Error('No source directory defined');
-        }
+    opts = opts || {};
 
-        if (!opts.dest) {
-            throw new Error('No destination directory defined');
-        }
+    if (!opts.src) {
+      throw new Error('No source directory defined');
+    }
 
-        return fs.src(opts.src)
-            .pipe(deps( opts ))
-            .pipe(fs.dest(opts.dest));
-    },
-    gulp: deps
+    if (!opts.dest) {
+      throw new Error('No destination directory defined');
+    }
+
+    return fs.src(opts.src)
+      .pipe(deps(opts))
+      .pipe(fs.dest(opts.dest));
+  },
+
+
+  gulp: deps
 };
